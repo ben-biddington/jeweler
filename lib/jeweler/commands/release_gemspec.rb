@@ -52,7 +52,7 @@ class Jeweler
 
       def gemspec_changed?
         # OMGHAX. ruby-git status always ends up being 'M', so let's do it a crazy way
-        system "git status -s #{working_subdir.join(gemspec_helper.path)} | grep  #{working_subdir.join(gemspec_helper.path)} > /dev/null 2>/dev/null"
+        system "git status -s #{working_subdir.join(gemspec_helper.path)} | grep  #{working_subdir.join(gemspec_helper.path)}"
       end
 
       def gemspec_helper
